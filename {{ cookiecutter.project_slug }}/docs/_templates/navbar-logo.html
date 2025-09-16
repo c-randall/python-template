@@ -32,6 +32,6 @@
     <img src="{{ theme_logo['image_relative'][js_mode] }}" class="logo__image only-{{ js_mode }} pst-js-only" alt="{{ alt }}"/>
   {% endif %}
   {% if not is_logo or theme_logo.get("text") %}
-    <p class="title logo__title">{{ cookiecutter.package_name }}</p>
+    <p class="title logo__title">{{ project }}</p>
   {% endif %}
 </a>

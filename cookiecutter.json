@@ -5,6 +5,7 @@
     "author_name": "Your Name",
     "author_email": "mail@mail.com",
     "_copy_without_render": [
-        "docs/_templates/copyright.html"
+        "docs/_templates/copyright.html",
+        "docs/_templates/navbar-logo.html"
     ]
 }
