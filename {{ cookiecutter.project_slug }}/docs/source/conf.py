@@ -10,7 +10,7 @@ import {{ cookiecutter.package_name }}
 
 project = '{{ cookiecutter.package_name }}'
 copyright = 'copyright'
-author = 'Corey R. Randall'
+author = '{{ cookiecutter.author_name }}'
 version = {{ cookiecutter.package_name }}.__version__
 release = {{ cookiecutter.package_name }}.__version__
 
