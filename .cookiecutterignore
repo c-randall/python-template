@@ -1,0 +1,5 @@
+# Ignore all CI files
+ci.yaml
+
+# Ignore copyright.html template
+copyright.html
