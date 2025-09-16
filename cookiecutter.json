@@ -3,5 +3,8 @@
     "project_name": "My Project",
     "package_name": "my_package",
     "author_name": "Your Name",
-    "author_email": "mail@mail.com"
+    "author_email": "mail@mail.com",
+    "_copy_without_render": [
+        "docs/_templates/copyright.html"
+    ]
 }
