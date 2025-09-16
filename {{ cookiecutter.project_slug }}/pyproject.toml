@@ -57,7 +57,7 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/NREL/{{ cookiecutter.project_slug }}"
+# Homepage = ""
 # Documentation = ""
-Repository = "https://github.com/NREL/{{ cookiecutter.project_slug }}"
-Issues = "https://github.com/NREL/{{ cookiecutter.project_slug }}/issues"
+# Repository = ""
+# Issues = ""
