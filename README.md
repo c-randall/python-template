@@ -21,7 +21,7 @@ After you have completed these steps you should have a template repo set up on y
 pip install -e .[dev]
 ```
 
-The `-e` option will install your package in editable mode so any changes you made are automatically reflected the next time you import your package. Note that this is only true for files inside the `src` folder. If you add dependencies to `pyproject.toml` then you will need to re-install your package. You can re-use the command above to do this.
+The `-e` option will install your package in editable mode so any changes you make are automatically reflected the next time you import your package. Note that this is only true for files inside the `src` folder. If you add dependencies to `pyproject.toml` then you will need to re-install your package. You can re-use the command above to do this.
 
 # Documentation details
 Aside from updating the `pyproject.toml` file with metadata specific to your project you may also want to update some information on the `sphinx` documentation that gets built. The metadata for the build is in `docs/source/conf.py`. Spefically you will want to consider updating the `copyright` field and the links that the GitHub and PyPI icons are attached to. The `copyright` option is at the top of the file, but the links are lower on the page, inside the `html_theme_options` dictionary stored under the `icon_links` key. If you search the file for `icon_links` it should be pretty simple to see where the update needs to go. 
