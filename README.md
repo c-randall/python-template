@@ -30,3 +30,6 @@ One benefit of using this template over over project environment managers is tha
 * `nox -s pre-commit -- write format` - Run the linter, spellcheck, and tests. Autoformat any issues (if possible) that conflict with the linter, and write any spelling corrections directly.
 
 The best way to get more information on any of the `nox` sessions and options is to look at the `noxfile.py` file.
+
+# What's missing?
+There are still a few common features and files missing from this template that you may want to add. Speficially, there are no `workflows` to run any continuous development or deployment. Additionally, while the template helps you build your documentation it does not include any `.readthedocs.yml` file that links it to a Read the Docs profile. Lastly, the template does not include any default license. Each of these last three features requires a bit more thought from the user and/or additional profiles to be made on distribution sites (e.g., PyPI and/or Read the Docs). You can refer to the [thevenin repo](https://github.com/NREL/thevenin/), which this template is based off of, if you're looking for examples for how to implement these last few capabilities. 
