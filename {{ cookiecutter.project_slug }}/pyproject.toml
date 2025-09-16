@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 [tool.setuptools.dynamic]
-version = {attr = "{{ cookecutter.package_name }}.__version__"}
+version = {attr = "{{ cookiecutter.package_name }}.__version__"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
