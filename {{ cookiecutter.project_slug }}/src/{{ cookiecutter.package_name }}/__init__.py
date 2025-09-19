@@ -1,7 +1,7 @@
 """
 Summary
 =======
-TODO
+TODO: top-level package docstring
 
 """
 

@@ -35,8 +35,8 @@ version = {attr = "{{ cookiecutter.package_name }}.__version__"}
 [tool.setuptools.packages.find]
 where = ["src"]
 
-# [tool.setuptools.package-data]
-# {{ cookiecutter.package_name }} = ["**/*.yaml", "**/*.yml", "**/*.csv"]
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.yml", "*.csv", "*.css"]
 
 [project.optional-dependencies]
 docs = [

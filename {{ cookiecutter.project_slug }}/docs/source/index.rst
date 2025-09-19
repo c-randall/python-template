@@ -1,7 +1,7 @@
 =======
 Summary
 =======
-TODO
+TODO: homepage summary
 
 .. toctree:: 
    :caption: User Guide
