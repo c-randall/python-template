@@ -11,7 +11,7 @@ readme = "README.md"
 dynamic = ["version"]
 # description = ""
 # keywords = []
-requires-python = ">=3.9,<3.14"  # Should update if after Oct 2025
+requires-python = ">=3.9,<3.14"  # Change if after Oct. 2025
 # license = ""
 # license-files = [""]
 authors = [
