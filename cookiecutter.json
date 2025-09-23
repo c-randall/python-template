@@ -5,6 +5,7 @@
     "author_name": "Your Name",
     "author_email": "mail@mail.com",
     "_copy_without_render": [
+        ".github/workflows/*",
         "docs/source/_templates/*"
     ]
 }
