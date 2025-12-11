@@ -20,13 +20,13 @@ release = {{ cookiecutter.package_name }}.__version__
 
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.viewcode',
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
-    'autoapi.extension',
+    'sphinx.ext.viewcode',
     'myst_nb',
     'sphinx_design',
     'sphinx_copybutton',
+    'autoapi.extension',
 ]
 
 templates_path = ['_templates']
@@ -44,6 +44,7 @@ source_suffix = {
     '.myst': 'myst-nb',
 }
 
+default_role = 'literal'  # allow single backticks for inline code refs
 highlight_language = 'console'
 
 
@@ -93,22 +94,24 @@ html_theme_options = {
 # -- Options for napoleon ----------------------------------------------------
 # https://sphinx-doc.org/en/master/usage/extensions/napoleon.html
 
+napoleon_use_ivar = True
 napoleon_use_rtype = False
+napoleon_numpy_docstring = True
 napoleon_custom_sections = [
-    "Summary",
+    'Summary',
 ]
 
 
 # -- Options for autoapi -----------------------------------------------------
 # https://sphinx-autoapi.readthedocs.io/en/latest/reference/config.html
 
-autoapi_type = 'python'
-autoapi_dirs = ['../../src/{{ cookiecutter.package_name }}']
-autoapi_keep_files = True
 autoapi_root = 'api'
-autoapi_member_order = 'groupwise'
+autoapi_type = 'python'
+autoapi_keep_files = True
 autodoc_typehints = 'none'
+autoapi_member_order = 'groupwise'
 autoapi_python_class_content = 'both'
+autoapi_dirs = ['../../src/{{ cookiecutter.package_name }}']
 autoapi_options = [
     'members',
     'imported-members',
