@@ -9,8 +9,9 @@
 import {{ cookiecutter.package_name }}
 
 project = '{{ cookiecutter.package_name }}'
-copyright = 'copyright'
 author = '{{ cookiecutter.author_name }}'
+copyright = 'copyright'
+
 version = {{ cookiecutter.package_name }}.__version__
 release = {{ cookiecutter.package_name }}.__version__
 
@@ -39,9 +40,9 @@ exclude_patterns = [
 ]
 
 source_suffix = {
-    '.rst': 'restructuredtext',
-    '.ipynb': 'myst-nb',
     '.myst': 'myst-nb',
+    '.ipynb': 'myst-nb',
+    '.rst': 'restructuredtext',
 }
 
 default_role = 'literal'  # allow single backticks for inline code refs
@@ -57,6 +58,7 @@ html_theme = 'pydata_sphinx_theme'
 html_context = {'default_mode': 'dark'}
 
 html_static_path = ['_static']
+
 html_js_files = ['custom.js']
 html_css_files = ['custom.css']
 
