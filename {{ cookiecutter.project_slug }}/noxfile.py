@@ -67,13 +67,12 @@ def run_spellcheck(session: nox.Session) -> None:
     the files. Otherwise, you will only see a summary of the found errors.
 
     """
+    
+    run_codespell(session)
 
     command = ['codespell', '--config=.github/linters/.codespellrc']
-
     if 'write' in session.posargs:
         command.insert(1, '-w')
-
-    run_codespell(session)
 
     session.run(*command, 'docs/source')
 
