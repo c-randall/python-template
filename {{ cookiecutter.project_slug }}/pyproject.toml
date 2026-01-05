@@ -9,11 +9,11 @@ build-backend = "setuptools.build_meta"
 name = "{{ cookiecutter.package_name }}"
 readme = "README.md"
 dynamic = ["version"]
-# description = ""
-# keywords = []
+# description = "..."
+# keywords = ["...", "..."]
 requires-python = ">=3.10,<3.15"  # Change if after Oct. 2026
-# license = ""
-# license-files = [""]
+# license = "..."
+# license-files = ["LICENSE"]
 authors = [
     { name = "{{ cookiecutter.author_name }}" },
     { email = "{{  cookiecutter.author_email }}" },
@@ -63,7 +63,7 @@ dev = [
 ]
 
 # [project.urls]
-# Homepage = ""
-# Documentation = ""
-# Repository = ""
-# Issues = ""
+# Homepage = "https://..."
+# Documentation = "https://..."
+# Repository = "https://..."
+# Issues = "https://..."
