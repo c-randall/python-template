@@ -98,12 +98,16 @@ def run_pytest(session: nox.Session) -> None:
             'tests/',
         ]
     else:
+        os.makedirs('reports', exist_ok=True)
+        
         command = [
             'pytest',
             '--cov=src/{{ cookiecutter.package_name }}',
             '--cov-report=html:reports/htmlcov',
             '--cov-report=xml:reports/coverage.xml',
             '--junitxml=reports/junit.xml',
+            '--html=reports/pytest.html',
+            '--self-contained-html',
             'tests/',
         ]
 
