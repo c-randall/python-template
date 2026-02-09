@@ -1,6 +1,5 @@
 import os
 import shutil
-import importlib
 
 import nox
 
@@ -89,13 +88,17 @@ def run_pytest(session: nox.Session) -> None:
     you can specify the number of workers using an int, e.g., parallel=4.
 
     """
-    package = importlib.util.find_spec('{{ cookiecutter.package_name }}')
-    coverage_folder = os.path.dirname(package.origin)
-
     if 'no-reports' in session.posargs:
         command = [
             'pytest',
-            f'--cov={coverage_folder}',  # for editable or site-packages
+            '--cov={{ cookiecutter.package_name }}',
+            'tests/',
+        ]
+    elif 'codecov' in session.posargs:
+        command = [
+            'pytest',
+            '--cov={{ cookiecutter.package_name }}',
+            '--cov-report=xml',
             'tests/',
         ]
     else:
@@ -103,7 +106,7 @@ def run_pytest(session: nox.Session) -> None:
 
         command = [
             'pytest',
-            '--cov=src/{{ cookiecutter.package_name }}',
+            '--cov={{ cookiecutter.package_name }}',
             '--cov-report=html:reports/htmlcov',
             '--cov-report=xml:reports/coverage.xml',
             '--junitxml=reports/junit.xml',
@@ -118,7 +121,7 @@ def run_pytest(session: nox.Session) -> None:
         elif arg.startswith('parallel'):
             command[1:1] = ['-n', 'auto']
 
-    os.environ['MPLBACKEND'] = 'Agg'  # for matplotlib-based tests
+    os.environ['MPLBACKEND'] = 'Agg'  # avoid matplotlib issues in workflows
     session.run(*command)
 
 
