@@ -23,7 +23,6 @@ maintainers = [
     { email = "{{ cookiecutter.author_email }}" },
 ]
 classifiers = [
-    "Intended Audience :: Science/Research",
     "Programming Language :: Python :: 3",
 ]
 dependencies = [
@@ -59,6 +58,9 @@ ignore = [
     "D1", "D203", "D205", "D212", "D400", "D401", "D415",
     "E201", "E202", "E226", "E241", "E731",
 ]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**/*" = ["D"]
