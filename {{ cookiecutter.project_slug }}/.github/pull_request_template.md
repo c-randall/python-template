@@ -17,7 +17,7 @@ Please add a line in the relevant section of [CHANGELOG.md](https://github.com/N
 - [ ] All tests pass: `$ nox -s tests`
 - [ ] Badges are updated: `$ nox -s badges`
 
-The optional `-- format` and `-- write` arguments (see above) attempt to correct formatting issues prior to running the linter, and spelling mistakes prior to running the spellcheck, respectively. You can also run all of the above checks using `$ nox -s pre-commit` instead of running them individually.
+The optional `-- format` and `-- write` arguments (see above) attempt to correct formatting issues prior to running the linter, and spelling mistakes prior to running the spellcheck, respectively. You can also run all of the above checks using `$ nox -s pre-commit` instead of running them individually, which is the preferred/recommended method.
 
 ## Further checks:
 - [ ] The documentation builds: `$ nox -s docs`.
