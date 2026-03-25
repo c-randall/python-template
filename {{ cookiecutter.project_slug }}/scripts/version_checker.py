@@ -1,5 +1,6 @@
 import requests
 import argparse
+
 from packaging.version import Version
 
 
@@ -61,10 +62,6 @@ def check_against_pypi(pypi: str, local: str) -> None:
     local : str
         Local package version.
 
-    Returns
-    -------
-    None.
-
     Raises
     ------
     ValueError
@@ -87,13 +84,9 @@ def check_against_tag(tag: str, local: str) -> None:
     Parameters
     ----------
     tag : str
-        Semmantically versioned tag.
+        Semantically versioned tag.
     local : str
         Local package version.
-
-    Returns
-    -------
-    None.
 
     Raises
     ------
