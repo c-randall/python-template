@@ -1,2 +1,2 @@
 [codespell]
-skip = build,docs,images,reports,references
+skip = build,docs,images,reports,references,inprogress
