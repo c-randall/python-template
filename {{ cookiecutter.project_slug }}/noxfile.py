@@ -129,15 +129,23 @@ def run_pytest(session: nox.Session) -> None:
 def run_genbadge(session: nox.Session) -> None:
     """Run genbadge to make test/coverage badges."""
     session.run(
-        'genbadge', 'coverage', '-l',
-        '-i', 'reports/coverage.xml',
-        '-o', 'images/coverage.svg',
+        'genbadge',
+        'coverage',
+        '-l',
+        '-i',
+        'reports/coverage.xml',
+        '-o',
+        'images/coverage.svg',
     )
 
     session.run(
-        'genbadge', 'tests', '-l',
-        '-i', 'reports/junit.xml',
-        '-o', 'images/tests.svg',
+        'genbadge',
+        'tests',
+        '-l',
+        '-i',
+        'reports/junit.xml',
+        '-o',
+        'images/tests.svg',
     )
 
 
@@ -174,12 +182,12 @@ def run_pre_commit(session: nox.Session) -> None:
     """
     Run all linters/tests and make new badges.
 
-    Order of sessions: ruff, spellcheck, pytest, genbadge. Using 'format' for
+    Order of sessions: spellcheck, ruff, pytest, genbadge. Using 'format' for
     linter, 'write' for spellcheck, and/or 'parallel' for pytest is permitted.
 
     """
-    run_ruff(session)
     run_spellcheck(session)
+    run_ruff(session)
 
     run_pytest(session)
     run_genbadge(session)

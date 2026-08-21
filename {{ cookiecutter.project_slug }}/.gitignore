@@ -12,9 +12,6 @@ __pycache__/
 *.pyd
 *.pxi
 
-# VSCode
-.vscode/
-
 # Distribution / packaging
 .Python
 build/
@@ -62,6 +59,7 @@ junit.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+.ruff_cache/
 cover/
 
 # Translations
